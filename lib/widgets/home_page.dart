@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smart_doorlock/component/button_action.dart';
 import 'package:smart_doorlock/config/colors.dart';
 import 'package:smart_doorlock/widgets/nav_bar_slide.dart';
-import 'package:smart_doorlock/widgets/onboarding_screen/onboarding-screen.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -52,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           //Streming vidio, ngambil vidionya di server api esp 32-cam
           // Pake modul OrientationBuilder nanti logicnya gimana caranya ngambil api sama ngeconnectkin url nya
           // Sementara pake container dulu aja.
@@ -67,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: GloblaColors.backgroundVidio,
             ),
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           Center(
             child: Column(
               children: [
@@ -96,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 Text(
                   'Flash ESP 32 - Cam',
                   style: GoogleFonts.poppins(

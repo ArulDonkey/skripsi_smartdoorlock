@@ -1,5 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
+// ignore: camel_case_types
 class iniSharedPreferences {
   setFirsLaunchValue(bool value) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
