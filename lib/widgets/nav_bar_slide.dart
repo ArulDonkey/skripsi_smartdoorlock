@@ -4,8 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:smart_doorlock/config/colors.dart';
 import 'package:smart_doorlock/widgets/home_page.dart';
 import 'package:smart_doorlock/widgets/menu/halaman_about.dart';
-import 'package:smart_doorlock/widgets/menu/halaman_daftar_wajah.dart';
-import 'package:smart_doorlock/widgets/menu/halaman_tidak_terdaftar_wajah.dart';
+import 'package:smart_doorlock/widgets/menu/halaman_daftar_wajah/halaman_daftar_wajah.dart';
 
 class NavBarSlide extends StatelessWidget {
   const NavBarSlide({super.key});
@@ -19,10 +18,13 @@ class NavBarSlide extends StatelessWidget {
         children: [
           Row(
             children: [
-              SvgPicture.asset(
-                'assets/svgs/menu-navigation-grid-1528-svgrepo-com 1.svg',
-                height: 30,
-                width: 30,
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: SvgPicture.asset(
+                  'assets/svgs/menu-navigation-grid-1528-svgrepo-com 1.svg',
+                  height: 30,
+                  width: 30,
+                ),
               ),
               const SizedBox(width: 10),
               Text(
@@ -60,20 +62,6 @@ class NavBarSlide extends StatelessWidget {
               );
             },
             text: 'Data Wajah Terdaftar',
-          ),
-          SizedBox(height: 20),
-          ListContent(
-            icon: 'assets/svgs/user-cross-rounded-svgrepo-com.svg',
-            onRout: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                      HalamanWajahTidakTerdaftar(),
-                ),
-              );
-            },
-            text: 'Data Wajah Tidak Terdaftar',
           ),
           SizedBox(height: 20),
           ListContent(
