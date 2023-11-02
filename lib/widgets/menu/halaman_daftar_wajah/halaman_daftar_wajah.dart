@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smart_doorlock/config/colors.dart';
+import 'package:smart_doorlock/widgets/menu/halaman_daftar_wajah/component/halaman_tidak_terdaftar_wajah.dart';
 import 'package:smart_doorlock/widgets/menu/halaman_daftar_wajah/component/laman.dart';
 import 'package:smart_doorlock/widgets/nav_bar_slide.dart';
 
@@ -75,6 +76,42 @@ class HalamanDaftarWajah extends StatelessWidget {
                     SizedBox(width: 10),
                     Text(
                       "Nama User yang terdaftar di database",
+                      style: GoogleFonts.poppins(
+                        color: GloblaColors.textColors,
+                        fontSize: 13,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        HalamanWajahTidakTerdaftar(),
+                  ),
+                );
+              },
+              child: Container(
+                width: 350,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: GloblaColors.backgroundVidio,
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(width: 5),
+                    Icon(Icons.list),
+                    SizedBox(width: 10),
+                    Text(
+                      "Nama User yang tidak terdaftar di database",
                       style: GoogleFonts.poppins(
                         color: GloblaColors.textColors,
                         fontSize: 13,

@@ -204,7 +204,13 @@ class MyTextButton extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(buttonName),
+                Text(
+                  buttonName,
+                  style: GoogleFonts.poppins(
+                    color: GloblaColors.textColors,
+                    fontSize: 15,
+                  ),
+                ),
               ],
             ),
             onPressed: onPressed,
