@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smart_doorlock/config/colors.dart';
 import 'package:smart_doorlock/widgets/home_page.dart';
-import 'package:smart_doorlock/widgets/menu/halaman_about.dart';
+import 'package:smart_doorlock/widgets/menu/halaman_about/halaman_about.dart';
 import 'package:smart_doorlock/widgets/menu/halaman_daftar_wajah/halaman_daftar_wajah.dart';
 
 class NavBarSlide extends StatelessWidget {
